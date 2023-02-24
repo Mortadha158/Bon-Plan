@@ -1,0 +1,241 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+          <li>
+            <a class="navbar-brand" href="#">
+              <span class="bon">Bon </span>
+              <span class="plan">Plan</span>
+            </a>
+          </li>
+          <li>
+            <!-- Button to Open the connexion Modal -->
+            <button
+              type="button"
+              class="btn btn-default"
+              data-bs-toggle="modal"
+              data-bs-target="#connexion"
+            >
+              Connexion
+            </button>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- The connexion Modal -->
+  <div class="modal fade" id="connexion">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Connexion</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!--connexion Modal body -->
+        <div class="modal-body">
+          <form action="/action_page.php">
+            <div class="form-group">
+              <div class="mb-3 mt-3">
+                <label for="cemail" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="cemail"
+                  placeholder="Enter email"
+                  name="email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="pwd"
+                  placeholder="Enter password"
+                  name="pswd"
+                />
+              </div>
+              <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="remember"
+                  />
+                  Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Se connecter
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!--connexion Modal footer -->
+        <div class="modal-footer">
+          <!-- Button to Open the inscription Modal -->
+          Vous n'avez pas encore de compte?
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#inscription"
+          >
+            Créer un compte
+          </button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The inscription Modal -->
+  <div class="modal fade" id="inscription">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!--inscription Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Inscription</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+          ></button>
+        </div>
+
+        <!-- inscription Modal body -->
+        <div class="modal-body">
+          <form>
+            <div class="mb-3 mt-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter name"
+                name="name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter email"
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="ipwd" class="form-label">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="ipwd"
+                placeholder="Enter password"
+                name="pswd"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="cpwd" class="form-label">Confirm password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="cpwd"
+                placeholder="Confirm password"
+                name="cpswd"
+              />
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="remember"
+                />
+                j'accepte les <a href="#"> conditions d'utilisation</a>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+          </form>
+        </div>
+
+        <!-- inscription Modal footer -->
+        <div class="modal-footer">
+          <!-- Button to Open the connexion Modal -->
+          vous avez deja un compte?
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#connexion"
+          >
+            Connexion
+          </button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

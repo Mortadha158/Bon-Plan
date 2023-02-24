@@ -1,0 +1,92 @@
+<div class="container">
+  <h3><u>Inscription</u></h3>
+  <form [formGroup]="inputForm">
+    <div class="mb-3 mt-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter name"
+        name="name"
+        formControlName="name"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="
+      !inputForm.pristine && inputForm.controls['name'].errors?.['required']"
+    >
+      Nom obligatoire !
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter email"
+        name="email"
+        formControlName="email"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="
+      !inputForm.pristine && inputForm.controls['email'].errors?.['required']"
+    >
+      E-mail obligatoire !
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="
+    !inputForm.pristine && inputForm.controls['email'].errors?.['email']"
+    >
+      verifier le syntax d'email
+    </div>
+
+    <div class="mb-3">
+      <label for="ipwd" class="form-label">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="ipwd"
+        placeholder="Enter password"
+        name="pswd"
+        formControlName="password"
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      role="alert"
+      *ngIf="
+    !inputForm.pristine && inputForm.controls['password'].errors?.['required']"
+    >
+      Mot de passe obligatoire !
+    </div>
+    <div class="mb-3">
+      <label for="cpwd" class="form-label">Confirm password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="cpwd"
+        placeholder="Confirm password"
+        name="cpswd"
+      />
+    </div>
+    <div class="form-check mb-3">
+      <label class="form-check-label me-2">
+        <input class="form-check-input" type="checkbox" name="remember" />
+        j'accepte les <a href="#"> conditions d'utilisation</a>
+      </label>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Check this checkbox to continue.</div>
+      <button type="submit" class="btn btn-primary" (click)="onsubmit()">
+        S'inscrire
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,46 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "hama",
+      "email": "hama@gmail.com",
+      "password": "test",
+      "role": "admin"
+    },
+    {
+      "name": "el-ret3i zidneh update",
+      "email": "hamaret3i@gmail.com",
+      "password": "testt",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "el-ret3a",
+      "email": "hama@gmail.com",
+      "password": "test",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "hama-yongeb-wahdo",
+      "email": "hama@gmail.com",
+      "password": "test",
+      "role": "admin"
+    },
+    {
+      "id": 5,
+      "name": "ahla-ness",
+      "email": "hama@gmail.com",
+      "password": "test",
+      "role": "admin"
+    },
+    {
+      "name": "hama yogob wahdo mara okhra ",
+      "email": "hama@gmail.com",
+      "password": "test",
+      "role": "admin",
+      "id": 6
+    }
+  ]
+}

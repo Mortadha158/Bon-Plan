@@ -1,0 +1,197 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="#">Logo</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mynavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="#">Link</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search" />
+        <button class="btn btn-primary me-2" type="button">Search</button>
+      </form>
+      <!-- Button to Open the connexion Modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#connexion"
+      >
+        Connexion
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!--modal start-->
+<!-- The connexion Modal -->
+<div class="modal fade" id="connexion">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Connexion</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <!--connexion Modal body -->
+      <div class="modal-body">
+        <form action="/action_page.php">
+          <div class="form-group">
+            <div class="mb-3 mt-3">
+              <label for="cemail" class="form-label">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="cemail"
+                placeholder="Enter email"
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="pwd"
+                placeholder="Enter password"
+                name="pswd"
+              />
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label me-2">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="remember"
+                />
+                Remember me
+              </label>
+              <button type="submit" class="btn btn-primary">
+                Se connecter
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--connexion Modal footer -->
+      <div class="modal-footer">
+        <!-- Button to Open the inscription Modal -->
+        Vous n'avez pas encore de compte?
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#inscription"
+        >
+          Créer un compte
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The inscription Modal -->
+<div class="modal fade" id="inscription">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!--inscription Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Inscription</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <!-- inscription Modal body -->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3 mt-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter name"
+              name="name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+              name="email"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="ipwd" class="form-label">Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="ipwd"
+              placeholder="Enter password"
+              name="pswd"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="cpwd" class="form-label">Confirm password:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="cpwd"
+              placeholder="Confirm password"
+              name="cpswd"
+            />
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label me-2">
+              <input class="form-check-input" type="checkbox" name="remember" />
+              j'accepte les <a href="#"> conditions d'utilisation</a>
+            </label>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- inscription Modal footer -->
+      <div class="modal-footer">
+        <!-- Button to Open the connexion Modal -->
+        vous avez deja un compte?
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#connexion"
+        >
+          Connexion
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--modal end-->
